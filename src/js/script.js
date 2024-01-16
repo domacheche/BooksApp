@@ -8,16 +8,16 @@
     const compiledTemplate = Handlebars.compile(bookTemplate);
 
     function renderBooks() {
-      booksList.innerHTML = ''; // Czyści obecną listę książek
+      booksList.innerHTML = '';
 
       dataSource.books.forEach(book => {
-        const html = compiledTemplate(book); // Generuje HTML dla każdej książki
-        const domElement = document.createRange().createContextualFragment(html); // Tworzy element DOM
-        booksList.appendChild(domElement); // Dodaje do listy w DOM
+        const html = compiledTemplate(book);
+        const domElement = document.createRange().createContextualFragment(html);
+        booksList.appendChild(domElement);
       });
     }
 
-    renderBooks(); // Wywołuje funkcję renderowania książek
+    renderBooks();
   });
 
   
